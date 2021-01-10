@@ -1,0 +1,377 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;e-shop-application---create-new-account",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "E-Shop Application - Create New Account",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 249000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1431000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User create account with \"Ashish\", \"Ghosh\", \"Ashish@shop.com\" and \"Password$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1532000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User account should get created",
+            "match": {
+              "location": "features\\support\\steps.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;login-to-the-e-shop-application-with-wrong-password",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Login to the E-Shop Application with Wrong Password",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 242000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1353000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "User logged in eshop using the invalid emailid \"testuser_negative@shop.com\" and the invalid password \"Testing$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 523000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "User should not get logged in",
+            "match": {
+              "location": "features\\support\\steps.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 511000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "payment;order-a-product",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Order a product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 252000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1502000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Ashishpwd$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2404000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features\\support\\steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 666000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User enters Address details with \"Mr\",\"Ashish\", \"Ghosh\", \"Amstelveen\",\"Uilenstede\",\"Amsterdam\",\"Amsterdam\", \"1181\"",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1680000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User enters Payment details with \"1234567890\", \"Ashish\", \"2031\",\"11\",\"151\"",
+            "match": {
+              "location": "features\\support\\steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User should get the Confirmation of Order",
+            "match": {
+              "location": "features\\support\\steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 502000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "payment",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Payment",
+    "tags": [],
+    "uri": "features\\payment.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-add;search-product",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Search Product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 245000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1396000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Password$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2330000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features\\support\\steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 665000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "User should be able to view and add the listed product \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-add",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search-Add",
+    "tags": [],
+    "uri": "features\\search.feature"
+  }
+]
