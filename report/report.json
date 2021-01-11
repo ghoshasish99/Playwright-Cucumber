@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 246000000
+              "duration": 244000000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1428000000
+              "duration": 1432000000
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1724000000
+              "duration": 1554000000
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 140000000
+              "duration": 106000000
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 1000000
             }
           }
         ],
@@ -80,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 250000000
+              "duration": 237000000
             }
           },
           {
@@ -93,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1378000000
+              "duration": 1459000000
             }
           },
           {
@@ -106,7 +106,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 550000000
+              "duration": 512000000
             }
           },
           {
@@ -119,7 +119,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 424000000
+              "duration": 423000000
             }
           },
           {
@@ -127,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 1000000
             }
           }
         ],
@@ -141,5 +141,237 @@
     "name": "Login",
     "tags": [],
     "uri": "features\\login.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "payment;order-a-product",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Order a product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 227000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1384000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Ashishpwd$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2297000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features\\support\\steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 622000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User enters Address details with \"Mr\",\"Ashish\", \"Ghosh\", \"Amstelveen\",\"Uilenstede\",\"Amsterdam\",\"Amsterdam\", \"1181\"",
+            "match": {
+              "location": "features\\support\\steps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1679000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User enters Payment details with \"1234567890\", \"Ashish\", \"2031\",\"11\",\"151\"",
+            "match": {
+              "location": "features\\support\\steps.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1154000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User should get the Confirmation of Order",
+            "match": {
+              "location": "features\\support\\steps.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 572000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "payment",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Payment",
+    "tags": [],
+    "uri": "features\\payment.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "search-add;search-product",
+        "keyword": "Scenario Outline",
+        "line": 3,
+        "name": "Search Product",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 234000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features\\support\\steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1420000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Password$1\"",
+            "match": {
+              "location": "features\\support\\steps.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2279000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features\\support\\steps.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 675000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "User should be able to view and add the listed product \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features\\support\\steps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 133000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "search-add",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Search-Add",
+    "tags": [],
+    "uri": "features\\search.feature"
   }
 ]
