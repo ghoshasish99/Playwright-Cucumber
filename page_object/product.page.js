@@ -11,7 +11,6 @@ class ProductPage {
 
     async productSearchSuccessful(item){
         await page.$('text="'+item+'"');
-        //expect (element).to.not.be.null;
     }
 
     async addProduct(item){
@@ -22,7 +21,6 @@ class ProductPage {
 
     async productAddSuccessful(item){
         await page.$('text="Proceed to checkout"');
-       // expect (element).to.not.be.null;
     }
 
     async proceedToCheckOut(){
