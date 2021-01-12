@@ -5,6 +5,7 @@
     "chai": "^4.2.0",
     "cucumber": "^7.0.0-rc.0",
     "cucumber-junit": "^1.7.1",
+    "cucumberjs-junitxml": "^1.0.0",
     "playwright": "1.7.1"
   },
   "keywords": [
