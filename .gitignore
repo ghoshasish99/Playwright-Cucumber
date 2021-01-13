@@ -69,3 +69,5 @@ typings/
 
 .report/*.html
 .report/*.log
+.report/*.json
+.report/*.xml

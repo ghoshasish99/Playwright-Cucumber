@@ -25,7 +25,7 @@
     "url": ""
   },
   "scripts": {
-    "test": "cucumber-js --parallel 1 -f json:report/report.json && node report.js"
+    "test": "cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
   },
   "version": "1.0.0",
   "dependencies": {
