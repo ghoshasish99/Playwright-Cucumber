@@ -1,15 +1,21 @@
 const {BeforeAll, Before, AfterAll, After} = require ('cucumber')
 const { chromium } = require('playwright');
 let moonHost = process.env.moonHostIp;
-//let moonHost = '34.77.128.69';
+//let moonHost = '52.186.103.162';
 
 // Create a global browser for the test session.
 BeforeAll(async() =>{
-        console.log(moonHost)
-        global.browser = await chromium.connect({
-        timeout: 0,
-        wsEndpoint: 'ws://'+moonHost+':4444/playwright/chromium'
-    });
+        if (moonHost){
+                console.log(moonHost)
+                global.browser = await chromium.connect({
+                timeout: 0,
+                wsEndpoint: 'ws://'+moonHost+':4444/playwright/chromium'
+            });
+        }
+        else{
+            console.log(moonHost)  
+            global.browser = await chromium.launch();
+        }
 });
 
 AfterAll(async() => {
