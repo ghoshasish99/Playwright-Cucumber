@@ -1,7 +1,8 @@
 const {BeforeAll, Before, AfterAll, After} = require ('cucumber')
 const { chromium } = require('playwright');
-let moonHost = process.env.moonHostIp;
-//let moonHost = '52.186.103.162';
+//let moonHost = process.env.moonHostIp;
+let moonHost = '52.186.103.162';
+//let moonHost = '';
 
 // Create a global browser for the test session.
 BeforeAll(async() =>{
