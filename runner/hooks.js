@@ -10,7 +10,8 @@ BeforeAll(async() =>{
                 console.log(moonHost)
                 global.browser = await chromium.connect({
                 timeout: 0,
-                wsEndpoint: 'ws://'+moonHost+':4444/playwright/chromium'
+                wsEndpoint: 'ws://'+moonHost+':4444/playwright/chromium',
+                headless:false
             });
         }
         else{
