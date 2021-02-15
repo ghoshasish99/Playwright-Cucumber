@@ -1,0 +1,33 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+container: mcr.microsoft.com/playwright:bionic
+
+steps:
+
+- script: |
+    npm install
+  displayName: 'npm install'
+
+- script: |
+    npm run test
+  displayName: 'execute tests'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'report/junitreport.xml'
+    testRunTitle: 'Test Report'
+  displayName: 'Publish Reports'
+
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: './report'
+    outputPath: './report'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
+    name: 'PlaywrightwithCucumber'
+    title: 'Playwright with Cucumber'
