@@ -1,8 +1,8 @@
 const {BeforeAll, Before, AfterAll, After} = require ('cucumber')
 const { chromium } = require('playwright');
 //let moonHost = process.env.moonHostIp;
-let moonHost = '52.186.103.162';
-//let moonHost = '';
+//let moonHost = '52.186.103.162';
+let moonHost = '';
 
 // Create a global browser for the test session.
 BeforeAll(async() =>{
@@ -26,11 +26,11 @@ AfterAll(async() => {
 
 // Create a fresh browser context for each test.
 Before(async() =>{
-    global.context = await global.browser.newContext(/*{
+    global.context = await global.browser.newContext({
         recordVideo : {
           dir : 'videos/'
         }
-    }*/);
+    });
     global.page = await global.context.newPage();
 });
 

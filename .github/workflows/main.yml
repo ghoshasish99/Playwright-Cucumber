@@ -30,4 +30,6 @@ jobs:
         if: ${{ always() }}
         with:
           name: test-artifacts
-          path: report
+          path: |
+           report
+           videos
