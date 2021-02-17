@@ -39,18 +39,19 @@ steps:
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
-          for FILE in dir
+          for FILE in ${dir%*/}
           do
-              mv FILE dir.webm
+              echo $FILE
+              mv $FILE ${dir%*/}.webm
           done
       done
       for dir in ./videos/*/ 
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
-          for FILE in dir
+          for FILE in ${dir%*/}
           do
-              echo FILE
+              echo $FILE
           done
       done
   displayName: 'Renaming videos'  
