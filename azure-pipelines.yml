@@ -44,9 +44,4 @@ steps:
                     mv "$FILE" "${dir%*/}/report.webm"
                 done
             done
-  displayName: 'Renaming videos'  
-
-- task: CmdLine@2
-  inputs:
-    script: az storage blob upload-batch --destination '$web' --account-name "$(blobAccount)" --source "videos" --sas-token "$(sasTokenBlob)" --connection-string "$(connectionStringBlob)"
-  displayName: 'Upload to BLOB'
+  displayName: 'Renaming videos'
