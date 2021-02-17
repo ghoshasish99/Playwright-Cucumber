@@ -31,3 +31,26 @@ steps:
     reportSuiteAsScenarios: true
     name: 'PlaywrightwithCucumber'
     title: 'Playwright with Cucumber'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      for dir in /videos/*/ 
+      do
+          dir=${dir%*/}      
+          echo ${dir##*/} 
+          for FILE in dir
+          do
+              mv FILE dir.webm
+          done
+      done
+      for dir in /videos/*/ 
+      do
+          dir=${dir%*/}      
+          echo ${dir##*/} 
+          for FILE in dir
+          do
+              echo FILE
+          done
+      done
+  displayName: 'Renaming videos'  
