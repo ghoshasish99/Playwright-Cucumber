@@ -33,16 +33,16 @@ jobs:
                 dir=${dir%*/}  
                 echo ${dir%*/}
                 echo ${dir##*/} 
-                for FILE in "${dir%*/}"
+                for FILE in "${dir%*/}"/*/
                 do
                     echo $FILE
-                    mv $FILE "${dir%*/}"/report.webm
+                    mv "$FILE" "${dir%*/}/report.webm"
                 done
             done
             for dir in ./videos/*/ 
             do
                 dir=${dir%*/}       
-                for FILE in "${dir%*/}"
+                for FILE in "${dir%*/}"/*/
                 do
                     echo "New File is" $FILE
                 done
