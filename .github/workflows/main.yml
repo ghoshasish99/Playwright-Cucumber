@@ -33,3 +33,24 @@ jobs:
           path: |
            report
            videos
+      - name : Rename videos
+        run: |
+           for dir in ./videos/*/ 
+            do
+                dir=${dir%*/}      
+                echo ${dir##*/} 
+                for FILE in "${dir%*/}"
+                do
+                    echo $FILE
+                    mv $FILE report.webm
+                done
+            done
+            for dir in ./videos/*/ 
+            do
+                dir=${dir%*/}      
+                echo ${dir##*/} 
+                for FILE in "${dir%*/}"
+                do
+                    echo $FILE
+                done
+            done         

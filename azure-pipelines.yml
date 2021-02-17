@@ -39,17 +39,17 @@ steps:
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
-          for FILE in ${dir%*/}
+          for FILE in "${dir%*/}"
           do
               echo $FILE
-              mv $FILE ${dir%*/}.webm
+              mv $FILE report.webm
           done
       done
       for dir in ./videos/*/ 
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
-          for FILE in ${dir%*/}
+          for FILE in "${dir%*/}"
           do
               echo $FILE
           done
