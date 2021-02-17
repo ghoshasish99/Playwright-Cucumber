@@ -1,6 +1,7 @@
 const {BeforeAll, Before, AfterAll, After} = require ('cucumber')
 const { chromium } = require('playwright');
 const fs = require ('fs')
+var path = require('path');
 //let moonHost = process.env.moonHostIp;
 //let moonHost = '52.186.103.162';
 let moonHost = '';
@@ -35,13 +36,17 @@ Before(async() =>{
     global.page = await global.context.newPage();
 });
 
-After(async(scenario) => {
-    const videoFileName = global.page.video.path();
-    fs.rename( videoFileName, "videos/"+scenario.pickle.name, (error) => { 
-        if (error) { 
-          console.log(error); 
-        }  
-    });  
+After(async() => {
+    const directoryPath = path.join(__dirname, 'videos');
+    fs.readdir(directoryPath, function (err, files) {
+        if (err) {
+            return console.log('Unable to scan directory: ' + err);
+        } 
+        files.forEach(function (file) {
+            // Do whatever you want to do with the file
+            console.log(file); 
+        });
+    });
     global.page.close();
     //global.context.close();
 });
