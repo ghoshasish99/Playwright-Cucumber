@@ -1,5 +1,6 @@
 const {BeforeAll, Before, AfterAll, After} = require ('cucumber')
 const { chromium } = require('playwright');
+const fs = require ('fs')
 //let moonHost = process.env.moonHostIp;
 //let moonHost = '52.186.103.162';
 let moonHost = '';
@@ -28,13 +29,19 @@ AfterAll(async() => {
 Before(async() =>{
     global.context = await global.browser.newContext({
         recordVideo : {
-          dir : 'videos/'
+          dir : 'videos/',
         }
     });
     global.page = await global.context.newPage();
 });
 
-After(async() => {
+After(async(scenario) => {
+    const videoFileName = global.page.video.path();
+    fs.rename( videoFileName, "videos/"+scenario.pickle.name, (error) => { 
+        if (error) { 
+          console.log(error); 
+        }  
+    });  
     global.page.close();
     //global.context.close();
 });
