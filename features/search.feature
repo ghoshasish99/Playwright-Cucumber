@@ -1,6 +1,7 @@
 Feature: Search-Add
 
-  Scenario Outline: Search Product
+  
+Scenario Outline: Search Product
     Given User launched eshop login page
     When User logged in eshop using the valid emailid "<EmailID>" and the valid password "<Password>"
     And User searches for the "<Product>"

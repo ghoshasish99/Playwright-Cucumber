@@ -7,9 +7,10 @@ const loginpage = new LoginPage();
 const productpage = new ProductPage();
 const paymentpage = new PaymentPage();
 
+
 Given('User launched eshop login page', async()=>{
-   await loginpage.navigate();
-});
+    await loginpage.navigate();
+ });
 
 When('User logged in eshop using the invalid emailid {string} and the invalid password {string}',async(username,password) =>{
     await loginpage.login(username,password);

@@ -27,26 +27,16 @@ AfterAll(async() => {
 });
 
 // Create a fresh browser context for each test.
-Before(async() =>{
+Before(async(scenario) =>{
     global.context = await global.browser.newContext({
         recordVideo : {
-          dir : 'videos/',
+          dir : 'videos/'+scenario.pickle.name,
         }
     });
     global.page = await global.context.newPage();
 });
 
 After(async() => {
-    const directoryPath = path.join(__dirname, 'videos');
-    fs.readdir(directoryPath, function (err, files) {
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        } 
-        files.forEach(function (file) {
-            // Do whatever you want to do with the file
-            console.log(file); 
-        });
-    });
-    global.page.close();
+    await global.page.close();
     //global.context.close();
 });
