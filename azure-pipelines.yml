@@ -35,7 +35,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      for dir in /videos/*/ 
+      for dir in ./videos/*/ 
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
@@ -44,7 +44,7 @@ steps:
               mv FILE dir.webm
           done
       done
-      for dir in /videos/*/ 
+      for dir in ./videos/*/ 
       do
           dir=${dir%*/}      
           echo ${dir##*/} 
